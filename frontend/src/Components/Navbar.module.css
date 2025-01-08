@@ -1,0 +1,106 @@
+/* Desktop Styles */
+
+.navbarContainer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    opacity: 0;
+    animation: show 1s forwards;
+  }
+  
+  .navbar {
+    width: 100vw;
+    height: 4rem;
+    background-color: var(--white);
+    color: var(--black-opacity);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navButtons {
+    padding-top: 1rem;
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+  }
+  
+  .navButtons li {
+    cursor: pointer;
+  }
+  
+  .applyNow:hover {
+    background-color: var(--dark-purple);
+    transform: scale(1.02);
+  }
+  
+  /* Mobile Styles */
+  
+  .menuIcon {
+    padding-top: 1rem;
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--black-opacity);
+    margin-right: 2rem;
+  }
+  
+  .mobileMenuActive {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 3rem;
+    right: 0;
+    width: 100%;
+    background-color: var(--white);
+    z-index: 999;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+    transform: translateY(-100%);
+    opacity: 0;
+    animation: slideDown 0.5s forwards;
+  }
+  
+  .mobileMenuActive li {
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+  
+  @media (max-width: 860px) {
+    .navButtons {
+      display: none; /* Hide desktop navigation */
+    }
+  
+    .applyNow {
+      display: none; /* Hide desktop "Apply Now" button */
+    }
+  
+    .menuIcon {
+      display: block; /* Show the hamburger menu icon */
+    }
+  
+    .mobileMenuActive {
+      display: flex; /* Display the dropdown only when active */
+    }
+  
+    .logo {
+      max-height: 50px;
+      padding-left: 2rem;
+      cursor: pointer;
+    }
+  }
+  
+  /* Animation Keyframes */
+  @keyframes show {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes hide {
+    to {
+      opacity: 0;
+    }
+  }

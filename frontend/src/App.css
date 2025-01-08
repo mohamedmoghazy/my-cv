@@ -1,100 +1,51 @@
 :root {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(0, 0, 0, 0.87);
-  background-color: #ffffff;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  --white: #ffffff;
-  --black-opacity: rgba(0, 0, 0, 0.7);
-  --white-opacity: #ffffffbf;
-}
-
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--blue-dark-opacity) var(--white);
-}
-
-#root {
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-button {
-  font-family: 'Poppins', sans-serif;
-}
-
-html {
-  overflow-x: hidden;
-}
-
-.cv-container {
-  font-family: Arial, sans-serif;
-  color: #3E177D; /* Dark purple */
-  background-color: #F7B10A; /* Golden yellow */
-  padding: 20px;
-}
-
-.cv-header {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #8949C4; /* Purple */
-}
-
-.cv-header h1 {
-  font-size: 2.5rem;
-  margin: 0;
-}
-
-.cv-header h2 {
-  font-size: 1.5rem;
-  margin: 5px 0;
-  color: #3E177D;
-}
-
-.cv-header a {
-  color: #EB1D28; /* Red */
-  text-decoration: none;
-}
-
-.cv-section {
-  margin-bottom: 20px;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  padding: 15px;
-  border-radius: 8px;
-}
-
-.cv-section h3 {
-  color: #F7B10A;
-  font-size: 1.25rem;
-}
-
-.cv-section ul {
-  list-style-type: square;
-  padding-left: 20px;
-}
-
-.cv-section ul li {
-  margin-bottom: 8px;
-  color: white;
-}
-
-.cv-section p {
-  color: white;
-}
+    font-family: 'Roboto Mono', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: #ffffff;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+    --purple: #8949C4;
+    --white: #ffffff;
+    --dark-purple: #62358c;
+    --light-purple: #9866c6;
+    --yellow: #F7B10A;
+    --red: #EB1D28;
+    --blue-dark-opacity: rgba(56, 89, 149, 0.5);
+    --black-opacity: rgba(0, 0, 0, 0.7);
+    --white-opacity: #ffffffbf;
+  }
+  
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--blue-dark-opacity) var(--white);
+  }
+  
+  #root {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Mono', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  button {
+    font-family: 'Roboto Mono', sans-serif;
+  }
+  
+  html {
+    overflow-x: hidden;
+  }
