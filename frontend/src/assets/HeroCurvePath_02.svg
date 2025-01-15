@@ -1,0 +1,17 @@
+<svg width="643" height="657" viewBox="0 0 643 657" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="HeroImagemorph" filter="url(#filter0_d_90_26)">
+<path d="M604.675 262.408C566.462 219.463 565.27 222.001 442.81 72.2742C320.35 -77.4529 26.267 103.873 11.0185 240.937C-4.23002 378.001 41.2698 343.001 80.7807 507.203C109.689 627.339 171.567 610.507 245.481 627.339C319.395 644.172 362.77 699.501 515.962 592.249C669.154 484.997 642.888 305.352 604.675 262.408Z" fill="#1E1E1E"/>
+</g>
+<defs>
+<filter id="filter0_d_90_26" x="0" y="0" width="642.107" height="656.623" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-8"/>
+<feGaussianBlur stdDeviation="4"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_90_26"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_90_26" result="shape"/>
+</filter>
+</defs>
+</svg>

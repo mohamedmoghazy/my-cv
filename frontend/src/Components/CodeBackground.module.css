@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  position: absolute;
+  width: 150px;
+  height: 450px;
+  z-index: -1000;
+}
+
+.containerBottomLeft {
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.containerTopRight {
+  top: -4rem;
+  right: 4rem;
+  rotate: 180deg;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+.grid-row {
+  display: flex;
+  position: absolute;
+}
+
+.grid-row span {
+  margin: 2px;
+}
+
+@media (max-width: 860px) {
+  .container {}
+}

@@ -1,51 +1,55 @@
 :root {
-    font-family: 'Roboto Mono', sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-  
-    color-scheme: light dark;
-    color: rgba(0, 0, 0, 0.87);
-    background-color: #ffffff;
-  
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  
-    --purple: #8949C4;
-    --white: #ffffff;
-    --dark-purple: #62358c;
-    --light-purple: #9866c6;
-    --yellow: #F7B10A;
-    --red: #EB1D28;
-    --blue-dark-opacity: rgba(56, 89, 149, 0.5);
-    --black-opacity: rgba(0, 0, 0, 0.7);
-    --white-opacity: #ffffffbf;
-  }
-  
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: var(--blue-dark-opacity) var(--white);
-  }
-  
-  #root {
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
-  
-  body {
-    padding: 0;
-    margin: 0;
-    font-family: 'Roboto Mono', sans-serif;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-  }
-  
-  button {
-    font-family: 'Roboto Mono', sans-serif;
-  }
-  
-  html {
-    overflow-x: hidden;
-  }
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: var(--gray);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --purple: #8949C4;
+  --white: #ffffff;
+  --white-opacity: rgba(255, 255, 255, 0.8);
+  --dark-purple: #62358c;
+  --light-purple: #9866c6;
+  --yellow: #FEC107;
+  --red: #EB1D28;
+  --blue-dark-opacity: rgba(56, 89, 149, 0.5);
+  --black-opacity: rgba(0, 0, 0, 0.7);
+  --white-opacity: #ffffffbf;
+  --dark-gray: #2d2e2e;
+  --gray: #1E1E1E;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--blue-dark-opacity) var(--white);
+}
+
+#root {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+html {
+  overflow-x: hidden;
+}

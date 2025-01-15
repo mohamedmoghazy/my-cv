@@ -1,13 +1,14 @@
 import React from "react";
 import "./Resume_01.css";
 
-const App = () => {
+const Resume_01 = () =>
+{
   return (
     <div className="cv-container">
       {/* Left Section */}
       <div className="left-section">
         <img src="your-profile-picture.jpg" alt="Mohamed Moghazi" />
-        
+
         <section className="skills">
           <h3>Skills</h3>
           <ul>
@@ -135,4 +136,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Resume_01;

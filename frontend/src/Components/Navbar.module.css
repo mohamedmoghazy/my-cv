@@ -1,106 +1,118 @@
 /* Desktop Styles */
 
 .navbarContainer {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    opacity: 0;
-    animation: show 1s forwards;
-  }
-  
+  display: flex;
+  position: fixed;
+  align-items: center;
+  width: 4rem;
+  z-index: 1000;
+  color: transparent;
+}
+
+.navbar {
+  align-items: center;
+  background-color: var(--dark-gray);
+  box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 4rem;
+  justify-content: center;
+}
+
+.navButtons {
+  list-style: none;
+  display: flex;
+  rotate: 90deg;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.navButtons li {
+  margin: 0;
+  text-align: center;
+  color: var(--white-opacity);
+  rotate: 180deg;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* Mobile Styles */
+
+@media (max-width: 860px) {
   .navbar {
-    width: 100vw;
+    width: 100%;
     height: 4rem;
-    background-color: var(--white);
-    color: var(--black-opacity);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: transparent;
+    box-shadow: none;
   }
-  
+
+  .navbarContainer {
+    width: 100%;
+  }
+
   .navButtons {
-    padding-top: 1rem;
-    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
     display: flex;
-    gap: 3rem;
+    rotate: none;
   }
-  
+
   .navButtons li {
-    cursor: pointer;
+    rotate: none;
   }
-  
-  .applyNow:hover {
-    background-color: var(--dark-purple);
-    transform: scale(1.02);
-  }
-  
-  /* Mobile Styles */
-  
+
   .menuIcon {
-    padding-top: 1rem;
-    display: none;
-    cursor: pointer;
+    display: block;
+    position: fixed;
+    top: 1rem;
+    right: 3.5rem;
     font-size: 2rem;
-    color: var(--black-opacity);
-    margin-right: 2rem;
+    color: var(--white);
+    z-index: 1100;
+    cursor: pointer;
   }
-  
+
   .mobileMenuActive {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 3rem;
-    right: 0;
-    width: 100%;
-    background-color: var(--white);
-    z-index: 999;
-    padding: 1rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
-    transform: translateY(-100%);
-    opacity: 0;
-    animation: slideDown 0.5s forwards;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--dark-gray);
+    z-index: 1000;
+    padding: 2rem 1rem;
+    gap: 2rem;
+    animation: slideDown 0.3s ease-in-out;
+    overflow-y: auto;
   }
-  
+
   .mobileMenuActive li {
-    padding: 0.5rem 0;
+    font-size: 1.2rem;
     text-align: center;
+    padding: 1rem 0;
+    cursor: pointer;
   }
-  
-  @media (max-width: 860px) {
-    .navButtons {
-      display: none; /* Hide desktop navigation */
-    }
-  
-    .applyNow {
-      display: none; /* Hide desktop "Apply Now" button */
-    }
-  
-    .menuIcon {
-      display: block; /* Show the hamburger menu icon */
-    }
-  
-    .mobileMenuActive {
-      display: flex; /* Display the dropdown only when active */
-    }
-  
-    .logo {
-      max-height: 50px;
-      padding-left: 2rem;
-      cursor: pointer;
-    }
+
+  .mobileMenuInactive {
+    display: none;
   }
-  
-  /* Animation Keyframes */
-  @keyframes show {
-    to {
-      opacity: 1;
-    }
+}
+
+/* Animation Keyframes */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
   }
-  
-  @keyframes hide {
-    to {
-      opacity: 0;
-    }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}

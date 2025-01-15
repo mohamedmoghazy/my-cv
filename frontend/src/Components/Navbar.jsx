@@ -3,10 +3,12 @@ import { Link } from "react-scroll";
 import styles from "./Navbar.module.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = () =>
+{
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () => {
+  const toggleMobileMenu = () =>
+  {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
@@ -14,28 +16,27 @@ const Navbar = () => {
     <div className={styles.navbarContainer}>
       <nav className={styles.navbar}>
         <ul
-          className={`${styles.navButtons} ${
-            isMobileMenuOpen ? styles.mobileMenuActive : styles.mobileMenuInactive
-          }`}
+          className={`${styles.navButtons} ${isMobileMenuOpen ? styles.mobileMenuActive : styles.mobileMenuInactive
+            }`}
         >
           <li>
-            <Link to="hero" smooth={true} duration={500} onClick={isMobileMenuOpen ? toggleMobileMenu : ""}>
+            <Link to="Home" smooth={true} duration={500} onClick={isMobileMenuOpen ? toggleMobileMenu : ""}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="classes" smooth={true} duration={500} onClick={isMobileMenuOpen ? toggleMobileMenu : ""}>
-              Classes
+            <Link to="About" smooth={true} duration={500} onClick={isMobileMenuOpen ? toggleMobileMenu : ""}>
+              About
             </Link>
           </li>
           <li>
-            <Link to="about-us" smooth={true} duration={500} onClick={isMobileMenuOpen ? toggleMobileMenu : ""}>
-              About Us
+            <Link to="Resume" smooth={true} duration={500} onClick={isMobileMenuOpen ? toggleMobileMenu : ""}>
+              Resume
             </Link>
           </li>
           <li>
-            <Link to="our-team" smooth={true} duration={500} onClick={isMobileMenuOpen ? toggleMobileMenu : ""}>
-              Our Team
+            <Link to="Projects" smooth={true} duration={500} onClick={isMobileMenuOpen ? toggleMobileMenu : ""}>
+              Projects
             </Link>
           </li>
         </ul>
