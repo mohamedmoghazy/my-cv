@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -16,26 +16,25 @@ const Navbar = () =>
     <div className={styles.navbarContainer}>
       <nav className={styles.navbar}>
         <ul
-          className={`${styles.navButtons} ${isMobileMenuOpen ? styles.mobileMenuActive : styles.mobileMenuInactive
-            }`}
+          className={`${styles.navButtons} ${isMobileMenuOpen ? styles.mobileMenuActive : styles.mobileMenuInactive}`}
         >
           <li>
-            <Link to="Home" smooth={true} duration={500} onClick={isMobileMenuOpen ? toggleMobileMenu : ""}>
+            <Link to="/" onClick={isMobileMenuOpen ? toggleMobileMenu : undefined}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="About" smooth={true} duration={500} onClick={isMobileMenuOpen ? toggleMobileMenu : ""}>
+            <Link to="/about" onClick={isMobileMenuOpen ? toggleMobileMenu : undefined}>
               About
             </Link>
           </li>
           <li>
-            <Link to="Resume" smooth={true} duration={500} onClick={isMobileMenuOpen ? toggleMobileMenu : ""}>
+            <Link to="/resume" onClick={isMobileMenuOpen ? toggleMobileMenu : undefined}>
               Resume
             </Link>
           </li>
           <li>
-            <Link to="Projects" smooth={true} duration={500} onClick={isMobileMenuOpen ? toggleMobileMenu : ""}>
+            <Link to="/projects" onClick={isMobileMenuOpen ? toggleMobileMenu : undefined}>
               Projects
             </Link>
           </li>

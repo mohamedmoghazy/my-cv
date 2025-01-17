@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "./Hero.module.css";
+import styles from "./Home.module.css";
 import { Link } from "react-scroll";
 // import curvedImageSrc from "../assets/HeroImage.jpg";
 import CodeBackground from "./CodeBackground.jsx";
@@ -25,7 +25,7 @@ const Hero = () =>
         </div>
       </div>
 
-      <HeroImageSVG  />
+      <HeroImageSVG />
 
 
     </section>
