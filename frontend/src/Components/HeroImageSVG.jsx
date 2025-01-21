@@ -25,7 +25,7 @@ const HeroImageSVG = () =>
 {
     return (
         <div className={styles.root}>
-            <svg className={styles.morphShape} viewBox="0 0 551 651" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className={styles.morphShape} fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <clipPath id="clip">
                         <motion.path
@@ -40,8 +40,8 @@ const HeroImageSVG = () =>
             <div className={styles.heroImageContainer}>
                 <img src={curvedImageSrc} alt="Curved Image" className={styles.hero_image} style={{ clipPath: "url(#clip)" }} />
 
-                <CodeBackground position="bottom-left" />
-                <CodeBackground position="top-right" />
+                <CodeBackground className={styles.Codebackground} position="bottom-left" />
+                <CodeBackground className={styles.Codebackground} position="top-right" />
             </div>
 
         </div>

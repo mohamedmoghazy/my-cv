@@ -1,20 +1,17 @@
 .root {
     display: flex;
     position: relative;
-    justify-content: unset;
-    align-items: unset;
-    padding-right: 4rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .heroImageContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 750px;
-    width: 630px;
+    width: 100%;
+    height: 100%;
     position: relative;
-    margin-left: 0px;
-    margin-top: 60px;
     z-index: 0;
 }
 
@@ -27,7 +24,7 @@
     height: 750px;
     width: 630px;
     object-fit: cover;
-    position: absolute;
+    position: relative;
     z-index: 0;
     overflow: hidden;
     object-position: center;
@@ -37,6 +34,17 @@
 
 .morphShape {
     position: absolute;
+}
+
+.Codebackground {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    object-position: center;
+    width: 70%;
+    height: 70%;
+    z-index: -1000;
 }
 
 @media (max-width: 860px) {

@@ -4,7 +4,7 @@
   background-color: transparent;
   width: 100vw;
   height: 100vh;
-  padding-left: 4rem;
+  padding-left: 12rem;
   overflow: hidden;
   position: relative;
   overflow: auto;
@@ -13,45 +13,36 @@
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: top;
-  align-items: top;
-  text-align: left;
+  justify-content: center;
+  align-items: left;
   width: 50%;
-  height: 30%;
   position: relative;
-  padding-top: 10rem;
-  padding-left: 4rem;
   z-index: 1;
+  transform: translateY(-3em);
 }
 
 .name {
-  top: 0;
   padding: 0;
   margin: 0;
-  font-size: clamp(2rem, 4vw, 4rem);
+  font-size: clamp(5rem, 5vw, 10rem);
   font-weight: 200;
-  text-align: top;
-  height: inherit;
   overflow: visible;
   white-space: nowrap;
-  position: relative;
-  width: 100%;
+  text-align: left;
   color: var(--white);
 }
 
 .title {
-  top: clamp(-20px, 4vw, -10px);
   padding: 0;
   margin: 0;
-  font-size: clamp(1.4rem, 2.5vw, 2.5rem);
+  padding-top: -4rem;
+  font-size: clamp(3rem, 3vw, 6rem);
   font-weight: 200;
-  text-align: bottom;
-  height: inherit;
+  text-align: left;
   overflow: visible;
   white-space: nowrap;
-  position: relative;
   color: var(--yellow);
-  width: 100%;
+  transform: translateY(-0.6em);
 }
 
 .description {
@@ -61,6 +52,7 @@
   margin-bottom: 2rem;
   color: var(--white-opacity);
   position: relative;
+  text-align: left;
 }
 
 .LearnmoreBtnContainer {
@@ -96,7 +88,7 @@
   transform: scale(1.10);
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1200px) {
   .hero {
     text-align: center;
     flex-direction: column;

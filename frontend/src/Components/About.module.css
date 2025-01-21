@@ -1,74 +1,70 @@
 .section {
-    display: flex;
-    flex-direction: column;
-    background-color: transparent;
-    height: auto;
-    overflow: hidden;
-    position: relative;
-    overflow: auto;
     margin-left: 8rem;
     margin-right: 4rem;
+    padding-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
 }
 
 .content {
-    margin: 0;
-    padding: 0;
-    padding-top: 4rem;
     display: flex;
     flex-direction: column;
-    justify-content: top;
-    align-items: top;
     text-align: left;
     position: relative;
     z-index: 1;
 }
 
-h1 {
-    margin: 0;
-    padding: 0;
-    padding-bottom: 2rem;
-    font-size: clamp(2rem, 4vw, 4rem);
-    font-weight: 200;
+.icon {
+    font-family: "Material Symbols Outlined";
+    font-size: 2.5rem;
     color: var(--white);
 }
 
-p {
+.line {
+    grid-column: span 2;
+    height: 1px;
+    background-color: var(--white-opacity);
+    margin: 2rem 0;
+}
+
+.title {
+    margin: 0;
+    /* padding-bottom: 1rem; */
+    font-size: clamp(1.2rem, 3vw, 1.7rem);
+    font-weight: 300;
+    color: var(--white);
+}
+
+.body {
     margin: 0;
     padding: 0;
-    text-align: top;
-    width: 100%;
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    font-weight: 300;
-    top: 0;
+    width: 80%;
+    font-size: clamp(0.6rem, 2vw, 1rem);
+    font-weight: 200;
     color: var(--white-opacity);
     position: relative;
 }
 
 @media (max-width: 860px) {
     .section {
-        text-align: center;
-        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
         padding-left: 0;
     }
 
-    .content {
-        padding-left: 0;
-        padding-right: 0;
+    h2,
+    p {
         text-align: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        padding-top: 4rem;
-        height: max-content;
     }
 
     p {
-        font-size: auto;
-        margin-left: 30px;
-        margin-right: 30px;
+        font-size: clamp(0.9rem, 2vw, 1.1rem);
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 
-    h1 {
-        font-size: auto;
+    h2 {
+        font-size: clamp(1.5rem, 4vw, 2rem);
     }
 }
