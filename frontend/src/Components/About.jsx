@@ -29,6 +29,7 @@ const About = () =>
                 <p className={styles.body}>
                     Today, I live in Germany with my wonderful wife and our two little children. Balancing family life and a career in game development has taught me the value of patience, adaptability, and persistence—qualities that resonate in my approach to both coding and parenting.
                 </p>
+                <div className={styles.line}></div>
             </div>
 
             <div className={styles.content}>
@@ -37,7 +38,9 @@ const About = () =>
                 <p className={styles.body}>
                     For me, programming is more than just a profession; it’s a craft. I take pride in designing systems that are both efficient and scalable, believing that clean, reusable code lays the foundation for future success. Whether it’s developing an intricate game mechanic or solving a complex technical challenge, I thrive on bringing ideas to life through technology.
                 </p>
+                <div className={styles.line}></div>
             </div>
+
         </section >
     );
 };

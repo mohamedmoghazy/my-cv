@@ -19,11 +19,11 @@
   --light-purple: #9866c6;
   --yellow: #FEC107;
   --red: #EB1D28;
-  --blue-dark-opacity: rgba(56, 89, 149, 0.5);
+  --blue-dark-opacity: #262A31;
   --black-opacity: rgba(0, 0, 0, 0.7);
   --white-opacity: #ffffffbf;
-  --dark-gray: #2d2e2e;
-  --gray: #1E1E1E;
+  --dark-gray-opacity: rgba(38, 42, 49, 0.3);
+  --gray: #14171C;
 }
 
 * {

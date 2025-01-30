@@ -1,70 +1,118 @@
 .section {
-    margin-left: 8rem;
-    margin-right: 4rem;
-    padding-top: 3rem;
+    padding: 0;
+    margin: 0;
+    padding-right: 4rem;
+    padding-left: 8rem;
+    padding-top: 2rem;
     display: grid;
+    align-items: start;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    column-gap: 4rem;
+    row-gap: 2rem;
+    height: auto;
+    width: auto;
 }
 
 .content {
     display: flex;
+    padding: 0;
+    margin: 0;
     flex-direction: column;
     text-align: left;
     position: relative;
     z-index: 1;
+    height: auto;
+    width: auto;
 }
 
 .icon {
+    margin: 0;
+    padding: 0;
     font-family: "Material Symbols Outlined";
     font-size: 2.5rem;
     color: var(--white);
 }
 
 .line {
-    grid-column: span 2;
+    padding: 0;
+    margin: 0;
     height: 1px;
     background-color: var(--white-opacity);
     margin: 2rem 0;
+    text-align: left;
+    max-width: 600px;
 }
 
 .title {
     margin: 0;
-    /* padding-bottom: 1rem; */
-    font-size: clamp(1.2rem, 3vw, 1.7rem);
+    padding: 0;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
     font-weight: 300;
     color: var(--white);
+    text-align: left;
+    height: auto;
+    width: auto;
 }
 
 .body {
     margin: 0;
     padding: 0;
-    width: 80%;
-    font-size: clamp(0.6rem, 2vw, 1rem);
     font-weight: 200;
+    font-size: clamp(0.6rem, 1.5vw, 1.2rem);
     color: var(--white-opacity);
     position: relative;
+    height: auto;
+    width: auto;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1200px) {
     .section {
-        margin-left: 0;
-        margin-right: 0;
+        padding-right: 0;
         padding-left: 0;
+        padding-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        column-gap: 0;
+        row-gap: 2rem;
     }
 
-    h2,
-    p {
+    .content {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        overflow: fit-content;
+        width: fit-content;
+        height: auto;
+    }
+
+    .line {
+        width: 30%;
         text-align: center;
     }
 
-    p {
-        font-size: clamp(0.9rem, 2vw, 1.1rem);
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
+    .icon {
+        text-align: center;
+        font-size: auto;
     }
 
-    h2 {
-        font-size: clamp(1.5rem, 4vw, 2rem);
+    .title {
+        font-size: clamp(1.2rem, 4vw, 2rem);
+        text-align: center;
+    }
+
+    .body {
+        text-align: center;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 6rem;
+        margin-right: 6rem;
+        padding-top: 1rem;
+        font-size: clamp(1rem, 3vw, 1.2rem);
+        height: auto;
+        width: auto;
+        min-width: 320px;
+        max-width: 600px;
     }
 }

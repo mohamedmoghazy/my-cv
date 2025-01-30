@@ -33,6 +33,6 @@
   margin: 2px;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1200px) {
   .container {}
 }
