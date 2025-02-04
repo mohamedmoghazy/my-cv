@@ -24,6 +24,7 @@
   --white-opacity: #ffffffbf;
   --dark-gray-opacity: rgba(38, 42, 49, 0.3);
   --gray: #14171C;
+  --black: #000000;
 }
 
 * {
@@ -70,4 +71,48 @@ html {
 .page-exit-active {
   opacity: 0;
   transition: opacity 500ms ease-in;
+}
+
+h2 {
+  font-size: 52px;
+  font-weight: 100;
+}
+
+h1 {
+  font-size: 62px;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 200;
+  color: var(--yellow);
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 54px;
+  font-weight: 200;
+}
+
+li {
+  font-size: 14px;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+  margin-top: 1rem;
+  color: var(--white-opacity);
+}
+
+a {
+  color: var(--white);
 }

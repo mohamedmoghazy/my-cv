@@ -1,0 +1,45 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    padding: 0;
+    margin: 0;
+    padding-right: 3rem;
+    padding-left: 5rem;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 0;
+    margin: 0;
+    margin-top: 3rem;
+}
+
+.number {
+    text-align: end;
+    padding: 0;
+    margin: 0;
+}
+
+.title {
+    text-align: start;
+    padding: 0;
+    margin: 0;
+}
+
+.separator {
+    margin: 0;
+    padding: 0;
+    height: 1px;
+    width: 100%;
+    background-color: var(--white-opacity);
+    display: flex;
+    position: relative;
+}
+
+.content {
+    padding: 0;
+    margin: 0;
+    text-align: start;
+}
