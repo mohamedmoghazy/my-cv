@@ -5,7 +5,7 @@
     padding: 0;
     margin: 0;
     padding-right: 3rem;
-    padding-left: 5rem;
+    padding-left: 3.5rem;
 }
 
 .header {
@@ -13,7 +13,8 @@
     grid-template-columns: 2fr 1fr;
     padding: 0;
     margin: 0;
-    margin-top: 3rem;
+    margin-top: 2rem;
+    align-items: flex-start;
 }
 
 .number {
@@ -34,12 +35,11 @@
     height: 1px;
     width: 100%;
     background-color: var(--white-opacity);
-    display: flex;
-    position: relative;
 }
 
 .content {
     padding: 0;
     margin: 0;
     text-align: start;
+    align-self: flex-start;
 }
