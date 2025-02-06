@@ -4,31 +4,29 @@ import ResumeSection from './ResumeSection.jsx';
 import workExperience from '../Data/WorkExperience.jsx';
 import styles from './ResumeCard.module.css';
 import skillsArray from '../Data/Skills.jsx';
-import AnimatedProgressBar from './AnimatedProgressBar.jsx';
 import { MdOutlineScubaDiving } from 'react-icons/md';
 import { GiTennisRacket } from 'react-icons/gi';
 import { IoGameController } from 'react-icons/io5';
+import AnimatedProgressBar from './AnimatedProgressBar.jsx';
+
+const hobbiesArray = [
+    { icon: IoGameController, text: 'Video Games' },
+    { icon: MdOutlineScubaDiving, text: 'Diving' },
+    { icon: GiTennisRacket, text: 'Tennis' },
+];
 
 const ResumeCard = () =>
 {
-    const hobbiesArray = [
-        { icon: IoGameController, text: 'Video Games' },
-        { icon: MdOutlineScubaDiving, text: 'Diving' },
-        { icon: GiTennisRacket, text: 'Tennis' },
-    ];
-
     const [skills, setSkills] = useState([]);
-    const skillsData = skillsArray;
 
     useEffect(() =>
     {
         const loadIcons = async () =>
         {
             const loadedSkills = await Promise.all(
-                skillsData.map(async (skill) =>
+                skillsArray.map(async (skill) =>
                 {
-                    const icon = await import(`../assets/${skill.icon}`);
-
+                    const icon = await import(`${skill.icon}`);
                     return { ...skill, icon: icon.default };
                 })
             );
@@ -64,12 +62,12 @@ const ResumeCard = () =>
                     <section>
                         <ResumeSection title="Education" number="02">
                             <ul>
-                                <li> <h3>B.Sc. in Computer Science</h3>
+                                <li>
+                                    <h3>B.Sc. in Computer Science</h3>
                                     <h4>6th of October University, Egypt</h4>
                                     <br /><br />
                                     2006 - 2011.
                                 </li>
-
                                 <li>
                                     <span className={styles.subTitle}>Full-Stack Web/App Dev Bootcamp</span>
                                     WBS Coding School, Berlin
@@ -96,12 +94,6 @@ const ResumeCard = () =>
                                     <AnimatedProgressBar className={styles.icon} value={90} />
                                     <p>English</p>
                                 </div>
-
-                                <div className={styles.languagesBar}>
-                                    <AnimatedProgressBar className={styles.icon} value={70} />
-                                    <p>German</p>
-                                </div>
-
                                 <div className={styles.languagesBar}>
                                     <AnimatedProgressBar className={styles.icon} value={100} />
                                     <p>Arabic</p>
@@ -110,9 +102,9 @@ const ResumeCard = () =>
                         </ResumeSection>
 
                         <ResumeSection title="Hobbies" number="05">
-                            <div className={styles.gridLanguages}>
+                            <div className={styles.skillsGrid}>
                                 {hobbiesArray.map((hobby, index) => (
-                                    <div key={index} className={styles.hobbyItem}>
+                                    <div key={index} className={styles.skillItem}>
                                         <hobby.icon className={styles.skillIcon} />
                                         <p>{hobby.text}</p>
                                     </div>
@@ -122,7 +114,7 @@ const ResumeCard = () =>
                     </section>
                 </div>
             </div>
-        </div >
+        </div>
     );
 };
 
