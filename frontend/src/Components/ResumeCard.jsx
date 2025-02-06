@@ -4,9 +4,19 @@ import ResumeSection from './ResumeSection.jsx';
 import workExperience from '../Data/WorkExperience.jsx';
 import styles from './ResumeCard.module.css';
 import skillsArray from '../Data/Skills.jsx';
+import AnimatedProgressBar from './AnimatedProgressBar.jsx';
+import { MdOutlineScubaDiving } from 'react-icons/md';
+import { GiTennisRacket } from 'react-icons/gi';
+import { IoGameController } from 'react-icons/io5';
 
 const ResumeCard = () =>
 {
+    const hobbiesArray = [
+        { icon: IoGameController, text: 'Video Games' },
+        { icon: MdOutlineScubaDiving, text: 'Diving' },
+        { icon: GiTennisRacket, text: 'Tennis' },
+    ];
+
     const [skills, setSkills] = useState([]);
     const skillsData = skillsArray;
 
@@ -70,11 +80,41 @@ const ResumeCard = () =>
                         </ResumeSection>
 
                         <ResumeSection title="Skills" number="03">
-                            <div className={styles.skillsGrid}>
+                            <div className={styles.grid}>
                                 {skills.map((skill, index) => (
-                                    <div key={index} className={styles.skillItem}>
+                                    <div key={index} className={styles.item}>
                                         <img src={skill.icon} alt={skill.text} className={styles.skillIcon} />
                                         <p>{skill.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </ResumeSection>
+
+                        <ResumeSection title="Languages" number="04">
+                            <div className={styles.gridLanguages}>
+                                <div className={styles.languagesBar}>
+                                    <AnimatedProgressBar className={styles.icon} value={90} />
+                                    <p>English</p>
+                                </div>
+
+                                <div className={styles.languagesBar}>
+                                    <AnimatedProgressBar className={styles.icon} value={70} />
+                                    <p>German</p>
+                                </div>
+
+                                <div className={styles.languagesBar}>
+                                    <AnimatedProgressBar className={styles.icon} value={100} />
+                                    <p>Arabic</p>
+                                </div>
+                            </div>
+                        </ResumeSection>
+
+                        <ResumeSection title="Hobbies" number="05">
+                            <div className={styles.gridLanguages}>
+                                {hobbiesArray.map((hobby, index) => (
+                                    <div key={index} className={styles.hobbyItem}>
+                                        <hobby.icon className={styles.skillIcon} />
+                                        <p>{hobby.text}</p>
                                     </div>
                                 ))}
                             </div>

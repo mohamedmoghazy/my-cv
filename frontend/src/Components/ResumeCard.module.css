@@ -84,22 +84,88 @@
     margin-bottom: 1rem;
 }
 
-.skillsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+.grid {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     padding: 1rem;
+    padding-bottom: 0;
 }
 
-.skillItem {
+.item {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    flex: 1 1 50px;
+    max-width: 90px;
+}
+
+.item p {
+    font-size: 16px;
+    text-align: center;
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    padding-top: 1rem;
 }
 
 .skillIcon {
-    width: 50px;
-    height: 50px;
+    width: 90px;
+    height: 90px;
     margin-bottom: 0.5rem;
+}
+
+.languagesBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    padding: 0;
+    margin: 0;
+    max-width: 110px;
+}
+
+.gridLanguages {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    gap: clamp(1rem, 3vw, 5rem);
+    padding-bottom: 0;
+    padding-top: 1rem;
+}
+
+.skillIcon {
+    display: flex;
+    width: 90px;
+    height: 90px;
+    max-width: 90px;
+    margin-bottom: 0.5rem;
+}
+
+.hobbyitem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1 1 50px;
+    color: var(--white-opacity);
+    padding: 0;
+    margin: 0;
+    padding-bottom: 3rem;
+
+}
+
+.hobbyitem p {
+    font-size: 16px;
+    text-align: center;
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    padding-top: 1rem;
+    text-wrap: nowrap;
 }
