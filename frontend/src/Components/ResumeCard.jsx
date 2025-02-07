@@ -1,35 +1,36 @@
-import React, { useState, useEffect } from 'react';
-import SectionElement from './SectionElement.jsx';
-import ResumeSection from './ResumeSection.jsx';
-import workExperience from '../Data/WorkExperience.jsx';
-import styles from './ResumeCard.module.css';
-import skillsArray from '../Data/Skills.jsx';
-import { MdOutlineScubaDiving } from 'react-icons/md';
-import { GiTennisRacket } from 'react-icons/gi';
-import { IoGameController } from 'react-icons/io5';
-import AnimatedProgressBar from './AnimatedProgressBar.jsx';
-
-const hobbiesArray = [
-    { icon: IoGameController, text: 'Video Games' },
-    { icon: MdOutlineScubaDiving, text: 'Diving' },
-    { icon: GiTennisRacket, text: 'Tennis' },
-];
+import React, { useState, useEffect } from "react";
+import SectionElement from "./SectionElement.jsx";
+import ResumeSection from "./ResumeSection.jsx";
+import workExperience from "../Data/WorkExperience.jsx";
+import styles from "./ResumeCard.module.css";
+import skillsArray from "../Data/Skills.jsx";
+import AnimatedProgressBar from "./AnimatedProgressBar.jsx";
+import { MdOutlineScubaDiving } from "react-icons/md";
+import { GiTennisRacket } from "react-icons/gi";
+import { IoGameController } from "react-icons/io5";
 
 const ResumeCard = () =>
 {
+    const hobbiesArray = [
+        { icon: IoGameController, text: "Video Games" },
+        { icon: MdOutlineScubaDiving, text: "Diving" },
+        { icon: GiTennisRacket, text: "Tennis" },
+    ];
+
     const [skills, setSkills] = useState([]);
+
+    // ✅ Preload all images from assets using `import.meta.glob`
+    const icons = import.meta.glob("../assets/*.svg", { eager: true });
 
     useEffect(() =>
     {
-        const loadIcons = async () =>
+        const loadIcons = () =>
         {
-            const loadedSkills = await Promise.all(
-                skillsArray.map(async (skill) =>
-                {
-                    const icon = await import(`${skill.icon}`);
-                    return { ...skill, icon: icon.default };
-                })
-            );
+            const loadedSkills = skillsArray.map((skill) =>
+            {
+                const iconPath = `../assets/${skill.icon}`;
+                return { ...skill, icon: icons[iconPath]?.default || "" };
+            });
             setSkills(loadedSkills);
         };
 
@@ -65,13 +66,16 @@ const ResumeCard = () =>
                                 <li>
                                     <h3>B.Sc. in Computer Science</h3>
                                     <h4>6th of October University, Egypt</h4>
-                                    <br /><br />
+                                    <br />
+                                    <br />
                                     2006 - 2011.
                                 </li>
+
                                 <li>
                                     <span className={styles.subTitle}>Full-Stack Web/App Dev Bootcamp</span>
                                     WBS Coding School, Berlin
-                                    <br /><br />
+                                    <br />
+                                    <br />
                                     May 2024 - Oct 2024.
                                 </li>
                             </ul>
@@ -94,6 +98,12 @@ const ResumeCard = () =>
                                     <AnimatedProgressBar className={styles.icon} value={90} />
                                     <p>English</p>
                                 </div>
+
+                                <div className={styles.languagesBar}>
+                                    <AnimatedProgressBar className={styles.icon} value={70} />
+                                    <p>German</p>
+                                </div>
+
                                 <div className={styles.languagesBar}>
                                     <AnimatedProgressBar className={styles.icon} value={100} />
                                     <p>Arabic</p>
@@ -102,9 +112,9 @@ const ResumeCard = () =>
                         </ResumeSection>
 
                         <ResumeSection title="Hobbies" number="05">
-                            <div className={styles.skillsGrid}>
+                            <div className={styles.gridHobbies}>
                                 {hobbiesArray.map((hobby, index) => (
-                                    <div key={index} className={styles.skillItem}>
+                                    <div key={index} className={styles.hobbyitem}>
                                         <hobby.icon className={styles.skillIcon} />
                                         <p>{hobby.text}</p>
                                     </div>
