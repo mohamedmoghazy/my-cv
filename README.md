@@ -5,14 +5,12 @@ Welcome to my CV repository. This repository contains my professional experience
 ## Contents
 
 - **CV.pdf**: The latest version of my CV in PDF format.
-- **CV.html**: An HTML version of my CV for easy viewing in a browser.
+- **CV.html**: A web version of my CV for easy viewing in a browser.
 - **Assets**: Additional assets such as images or documents related to my CV.
 
 ## About Me
 
 I am a **Senior Unity Developer** and **Game Development Expert** with over 12 years of experience in AR/VR and game development. I have proven expertise in **Unity3D**, **C#**, and creating polished front-end features. I have contributed to projects such as **XCOM Legends** and **STÆDIUM**, with a strong focus on collaboration with backend teams and optimizing workflows.
-
-Currently, I am enhancing my skills with a Full-Stack Web Development Bootcamp and improving my language proficiency in German.
 
 ## Contact Information
 
@@ -57,7 +55,7 @@ Experienced **Software Engineer** with 12+ years in **AR/VR** and **Game Develop
 
 - **English**: Fluent
 - **Arabic**: Native
-- **German**: Intermediate (B1)
+- **German**: Intermediate (B1+)
 
 ## Notable Projects
 
