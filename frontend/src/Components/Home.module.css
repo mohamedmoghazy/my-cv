@@ -24,7 +24,7 @@
 .name {
   padding: 0;
   margin: 0;
-  font-size: clamp(4rem, 5vw, 6rem);
+  font-size: clamp(2rem, 5vw, 6rem);
   font-weight: 200;
   overflow: visible;
   white-space: nowrap;
@@ -36,7 +36,7 @@
   padding: 0;
   margin: 0;
   padding-top: -4rem;
-  font-size: clamp(2rem, 3vw, 4rem);
+  font-size: clamp(1.5rem, 3vw, 4rem);
   font-weight: 200;
   text-align: left;
   overflow: visible;
@@ -98,8 +98,8 @@
   }
 
   .content {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
+    margin: 0;
     text-align: center;
     align-items: center;
     flex-direction: column;
@@ -118,11 +118,12 @@
   }
 
   .name {
-    font-size: 4rem;
+    /* font-size: 2rem; */
+
   }
 
   .title {
-    font-size: 3rem;
+    /* font-size: 1rem; */
     padding-top: .5rem;
   }
 

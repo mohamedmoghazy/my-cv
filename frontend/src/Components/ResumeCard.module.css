@@ -179,3 +179,21 @@
     padding-top: 1rem;
     text-wrap: nowrap;
 }
+
+
+@media (max-width: 1200px) {
+    .ResumeCard {
+        grid-template-columns: 1fr;
+
+    }
+
+    .container {
+        margin-left: 0;
+    }
+
+    .seperator {
+        margin-top: 0rem;
+        width: 0px;
+        height: 0px;
+    }
+}

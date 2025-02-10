@@ -38,7 +38,7 @@ p {
     position: relative;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1200px) {
     .section {
         text-align: center;
         flex-direction: column;
