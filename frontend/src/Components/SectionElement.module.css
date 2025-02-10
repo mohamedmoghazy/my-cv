@@ -72,3 +72,15 @@
 .line::after {
     bottom: 0;
 }
+
+@media screen and (max-width: 1200px) {
+    .section {
+        /* grid-template-columns: 1fr; */
+    }
+
+
+    .textContent {
+        margin-left: .5rem;
+    }
+
+}

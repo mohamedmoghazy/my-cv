@@ -1,13 +1,10 @@
 .container {
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
     margin-left: 4rem;
     background-color: transparent;
-    height: auto;
 }
 
 .background {
@@ -17,7 +14,6 @@
     margin: 0;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     width: 100%;
-    height: auto;
 }
 
 .ResumeCard {
@@ -184,11 +180,18 @@
 @media (max-width: 1200px) {
     .ResumeCard {
         grid-template-columns: 1fr;
-
+        padding: 0;
+        margin: 0;
     }
 
     .container {
+        padding: 0;
         margin-left: 0;
+    }
+
+    .background {
+        width: 90%;
+        margin-top: .8rem;
     }
 
     .seperator {
@@ -196,4 +199,5 @@
         width: 0px;
         height: 0px;
     }
+
 }
