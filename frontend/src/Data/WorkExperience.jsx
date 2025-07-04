@@ -10,7 +10,7 @@ const workExperience = [
         ],
     },
     {
-        year: "2022 - 2023",
+        year: "2022 - 2024",
         title: <><a href="https://www.freeletics.com" target="_blank" rel="noopener noreferrer">Freeletics</a> - Sr. Software Engineer</>,
         location: "Munich - Fulltime",
         details: [
@@ -22,7 +22,7 @@ const workExperience = [
         ],
     },
     {
-        year: "2022 - 2023",
+        year: "2020 - 2022",
         title: <><a href="https://www.chimera-entertainment.de" target="_blank" rel="noopener noreferrer">Chimera</a> - Game Engineer</>,
         location: "Munich - Fulltime",
         details: [
