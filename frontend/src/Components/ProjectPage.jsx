@@ -154,6 +154,8 @@ const ProjectPage = () =>
                                     // Replace wrong YouTube video IDs with the correct one
                                     html = html.replace(/F7feEv_BJZk/g, 'IkMmx5erdmY');
                                     html = html.replace(/P7KQ-nAPmmM/g, 'IkMmx5erdmY');
+                                    // Remove the second duplicate YouTube video (comp-ist8afbx)
+                                    html = html.replace(/<div[^>]*id="comp-ist8afbx"[\s\S]*?<\/div><!--\/\$-->/gi, '');
                                 }
 
                                 return html;
