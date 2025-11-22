@@ -49,16 +49,14 @@ const ProjectPage = () =>
                                 />
                             );
                         })()}
-                        {project.slug === 'wallary-app' && (
-                            <div className={styles.heroText}>
-                                <h1 className={styles.heroTitle}>{project.title}</h1>
-                            </div>
-                        )}
+                        {/* Hero title overlay for all projects */}
+                        <div className={styles.heroText}>
+                            <h1 className={styles.heroTitle}>{project.title}</h1>
+                        </div>
                     </div>
                 )}
 
-                {/* Avoid duplicate title below hero for Wallary since it's overlaid */}
-                {project.slug !== 'wallary-app' && <h1>{project.title}</h1>}
+                {/* Title now always overlaid on hero, no duplicate needed */}
                 {project.description && <p>{project.description}</p>}
 
                 {/* Render provided HTML content if present (careful with HTML source) */}
@@ -89,6 +87,9 @@ const ProjectPage = () =>
                                 html = html.replace(/style=("|')[^"']*color:rgb\(47,\s*46,\s*46\)[^"']*("|')/gi, (m) => m.replace(/color:rgb\(47,\s*46,\s*46\)/i, 'color:#ffffff'));
                                 // Also replace spans that only wrap bold role label using that color
                                 html = html.replace(/<span[^>]*style="[^"]*color:rgb\(47,\s*46,\s*46\)[^"]*"/gi, (m) => m.replace(/color:rgb\(47,\s*46,\s*46\)/i, 'color:#ffffff'));
+                                // Replace black text color:#000000 (used in HOVR and other projects) with white
+                                html = html.replace(/color:#000000;?/gi, 'color:#ffffff;');
+                                html = html.replace(/color:\s*rgb\(0,\s*0,\s*0\)/gi, 'color:#ffffff');
 
                                 // Remove empty paragraphs (&nbsp; or just whitespace) to tighten vertical gaps
                                 html = html.replace(/<p[^>]*>(?:\s|&nbsp;)*<\/p>/gi, '');
@@ -112,6 +113,8 @@ const ProjectPage = () =>
                                 if (project.slug === 'hovr')
                                 {
                                     html = html.replace(/CGfD-KTwDJw/g, 'GlnF5FAE3mo');
+                                    // Remove the duplicate gallery slideshow section (image 14232491_1138607346234249...)
+                                    html = html.replace(/<div[^>]*id="comp-ist8zlyo"[^>]*data-testid="slide-show-gallery"[\s\S]*?<\/div><!--\/\$-->/gi, '');
                                 }
 
                                 // Fix mis-scraped Wallary content: heading labelled HOVR + missing hero image asset name
