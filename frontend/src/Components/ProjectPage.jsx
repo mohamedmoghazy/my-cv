@@ -27,7 +27,6 @@ const ProjectPage = () =>
                 {/* Hero image like Wix */}
                 {project.thumbnail && (
                     <div className={styles.heroWrap}>
-                        {/* Support external thumbnails (http/https) and local /projects/... assets */}
                         {(() =>
                         {
                             const base = import.meta.env.BASE_URL || '/';
@@ -50,10 +49,16 @@ const ProjectPage = () =>
                                 />
                             );
                         })()}
+                        {project.slug === 'wallary-app' && (
+                            <div className={styles.heroText}>
+                                <h1 className={styles.heroTitle}>{project.title}</h1>
+                            </div>
+                        )}
                     </div>
                 )}
 
-                <h1>{project.title}</h1>
+                {/* Avoid duplicate title below hero for Wallary since it's overlaid */}
+                {project.slug !== 'wallary-app' && <h1>{project.title}</h1>}
                 {project.description && <p>{project.description}</p>}
 
                 {/* Render provided HTML content if present (careful with HTML source) */}
@@ -78,6 +83,30 @@ const ProjectPage = () =>
 
                                 // Rewrite src and srcset that start with /projects/ to include Vite base
                                 html = html.replace(/(src|srcset)=("|')\/projects\//gi, `$1=$2${base}projects/`);
+
+                                // Force dark gray inline role text (My Roles, Co-Founder line) to white
+                                // Replace inline style color rgb(47, 46, 46) with pure white for readability
+                                html = html.replace(/style=("|')[^"']*color:rgb\(47,\s*46,\s*46\)[^"']*("|')/gi, (m) => m.replace(/color:rgb\(47,\s*46,\s*46\)/i, 'color:#ffffff'));
+                                // Also replace spans that only wrap bold role label using that color
+                                html = html.replace(/<span[^>]*style="[^"]*color:rgb\(47,\s*46,\s*46\)[^"]*"/gi, (m) => m.replace(/color:rgb\(47,\s*46,\s*46\)/i, 'color:#ffffff'));
+
+                                // Remove empty paragraphs (&nbsp; or just whitespace) to tighten vertical gaps
+                                html = html.replace(/<p[^>]*>(?:\s|&nbsp;)*<\/p>/gi, '');
+                                // Remove paragraphs that only contain wixGuard placeholder spans (invisible content creating large gaps)
+                                html = html.replace(/<p[^>]*>(?:\s*(?:<span[^>]*class=("|')[^"']*wixGuard[^"']*("|')[^>]*>\s*<\/span>)+\s*)<\/p>/gi, '');
+                                // Remove nested wrapper spans with color + wixGuard but no real text
+                                html = html.replace(/<p[^>]*>(?:\s*<span[^>]*>(?:\s*<span[^>]*class=("|')[^"']*wixGuard[^"']*("|')[^>]*>\s*<\/span>\s*)+<\/span>\s*)<\/p>/gi, '');
+                                // Generic cleanup: paragraphs containing wixGuard and no alphanumeric characters
+                                html = html.replace(/<p[^>]*>(?:(?:[^A-Za-z0-9<]*<span[^>]*class=("|')[^"']*wixGuard[^"']*("|')[^>]*>[^<]*<\/span>)+[^A-Za-z0-9<]*)<\/p>/gi, '');
+
+                                // Collapse any residual multiple blank lines produced by removals
+                                html = html.replace(/(<p[^>]*>\s*<\/p>\s*){2,}/gi, '');
+                                // Collapse consecutive removed paragraph boundaries leaving behind <br> sequences after tasks list
+                                html = html.replace(/(<br\s*\/?>(?:\s|&nbsp;)*){2,}/gi, '<br />');
+                                // Collapse multiple consecutive <br> tags to a single one
+                                html = html.replace(/(<br\s*\/?>{1,2}){2,}/gi, '<br />');
+                                // Trim superfluous whitespace between block elements
+                                html = html.replace(/\n{2,}/g, '\n');
 
                                 // If HOVR project: replace old YouTube video ID with the requested new one
                                 if (project.slug === 'hovr')

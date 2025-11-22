@@ -8,6 +8,8 @@
   overflow: hidden;
   position: relative;
   overflow: auto;
+  /* Ensure all text inside hero renders white on dark backgrounds */
+  color: #fff;
 }
 
 .content {
@@ -19,6 +21,8 @@
   position: relative;
   z-index: 1;
   transform: translateY(-3em);
+  /* Inherit white text color */
+  color: inherit;
 }
 
 .name {
@@ -41,7 +45,8 @@
   text-align: left;
   overflow: visible;
   white-space: nowrap;
-  color: var(--yellow);
+  /* Override previous accent color to white as requested */
+  color: #fff;
   transform: translateY(-0.6em);
 }
 
@@ -52,7 +57,7 @@
   font-size: clamp(1rem, 1.5vw, 1.5rem);
   font-weight: 300;
   margin-bottom: 2rem;
-  color: var(--white-opacity);
+  color: #fff;
   position: relative;
   text-align: left;
 }
@@ -69,7 +74,7 @@
   display: inline-flex;
   align-items: center;
   background-color: transparent;
-  color: var(--white);
+  color: #fff;
   border: none;
   font-size: 1rem;
   border-radius: 5px;
@@ -82,7 +87,7 @@
   display: inline-flex;
   align-items: center;
   margin-left: 8px;
-  color: var(--white);
+  color: #fff;
   font-size: 1rem;
 }
 
@@ -119,6 +124,8 @@
 
   .name {
     /* font-size: 2rem; */
+    color: #fff;
+    /* Ensure white in mobile view too */
 
   }
 
