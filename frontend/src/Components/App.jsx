@@ -8,6 +8,7 @@ import About from "./About";
 import Resume from "./Resume";
 import Projects from "./Projects";
 import Resume_01 from "./Resume_01";
+import ProjectPage from "./ProjectPage";
 
 const AppContent = () =>
 {
@@ -25,6 +26,7 @@ const AppContent = () =>
               <Route path="/about" element={<About />} />
               <Route path="/resume" element={<Resume />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/projects/:slug" element={<ProjectPage />} />
               <Route path="/Resume_01" element={<Resume_01 />} />
             </Routes>
           </CSSTransition>
