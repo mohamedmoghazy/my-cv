@@ -128,6 +128,17 @@ const ProjectPage = () =>
                                     html = html.replace(/<p><img[^>]*(wallary-hero|wallary-app-1)\.png[^>]*><\/p>/i, '');
                                 }
 
+                                // Fix POLYBLAST: remove store links and duplicate gallery
+                                if (project.slug === 'polyblast')
+                                {
+                                    // Remove the entire slide-show gallery section with duplicate images
+                                    html = html.replace(/<div[^>]*id="comp-ist85sj0"[^>]*data-testid="slide-show-gallery"[\s\S]*?<\/div><!--\/\$-->/gi, '');
+                                    // Remove Google Play store image/button
+                                    html = html.replace(/<div[^>]*id="comp-ist85sj7"[\s\S]*?<\/div><!--\/\$-->/gi, '');
+                                    // Remove Apple App Store image/button
+                                    html = html.replace(/<div[^>]*id="comp-ist85sj5"[\s\S]*?<\/div><!--\/\$-->/gi, '');
+                                }
+
                                 return html;
                             })()
                         }}
