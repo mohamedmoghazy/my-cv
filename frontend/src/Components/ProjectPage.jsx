@@ -139,6 +139,23 @@ const ProjectPage = () =>
                                     html = html.replace(/<div[^>]*id="comp-ist85sj5"[\s\S]*?<\/div><!--\/\$-->/gi, '');
                                 }
 
+                                // Fix HBAZBOZ VS ZOMBIES: remove wrong content and fix video
+                                if (project.slug === 'hbazboz-vs-zombies')
+                                {
+                                    // Remove the gallery with wrong images
+                                    html = html.replace(/<div[^>]*id="comp-ist85sj0"[^>]*data-testid="slide-show-gallery"[\s\S]*?<\/div><!--\/\$-->/gi, '');
+                                    // Remove the wrong title "POLYBLAST" 
+                                    html = html.replace(/<div[^>]*id="comp-ist85six"[\s\S]*?<\/div><!--\/\$-->/gi, '');
+                                    // Remove the wrong description
+                                    html = html.replace(/<div[^>]*id="comp-ist85siz"[\s\S]*?<\/div><!--\/\$-->/gi, '');
+                                    // Remove Google Play and App Store buttons
+                                    html = html.replace(/<div[^>]*id="comp-ist85sj7"[\s\S]*?<\/div><!--\/\$-->/gi, '');
+                                    html = html.replace(/<div[^>]*id="comp-ist85sj5"[\s\S]*?<\/div><!--\/\$-->/gi, '');
+                                    // Replace wrong YouTube video IDs with the correct one
+                                    html = html.replace(/F7feEv_BJZk/g, 'IkMmx5erdmY');
+                                    html = html.replace(/P7KQ-nAPmmM/g, 'IkMmx5erdmY');
+                                }
+
                                 return html;
                             })()
                         }}
