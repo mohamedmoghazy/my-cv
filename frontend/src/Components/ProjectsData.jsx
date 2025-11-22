@@ -83,8 +83,8 @@ const projects = [
     {
         "title": "HBAZBOZ VS ZOMBIES",
         "slug": "hbazboz-vs-zombies",
-    "description": "Prototype game project.",
-        "thumbnail": "/projects/hbazboz-vs-zombies-1.jpeg",
+        "description": "Prototype game project.",
+        "thumbnail": "/projects/habazboz-image.png",
         "github": "",
         "youtube": "https://www.youtube.com/watch?v=IkMmx5erdmY",
         "appLink": "",

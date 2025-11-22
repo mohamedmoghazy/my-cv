@@ -158,6 +158,15 @@ const ProjectPage = () =>
                                     html = html.replace(/<div[^>]*id="comp-ist8afbx"[\s\S]*?<\/div><!--\/\$-->/gi, '');
                                 }
 
+                                // Fix Hardee's Flavors: clean up gallery with too many images and organize content
+                                if (project.slug === 'hardees-flavors')
+                                {
+                                    // Remove the entire slide-show gallery section (7 images is too many)
+                                    html = html.replace(/<div[^>]*id="if1surjb"[^>]*data-testid="slide-show-gallery"[\s\S]*?<\/div><!--\/\$-->/gi, '');
+                                    // Remove the App Store button/link image (if1sooyk_2)
+                                    html = html.replace(/<div[^>]*id="if1sooyk_2"[\s\S]*?<\/div><!--\/\$-->/gi, '');
+                                }
+
                                 return html;
                             })()
                         }}
