@@ -18,7 +18,7 @@ I am a **Senior Unity Developer** and **Game Development Expert** with over 12 y
 - **Phone**: +49 (0) 15229018095
 - **Location**: Köln/Bonn, Germany
 - **LinkedIn**: [Profile](https://www.linkedin.com/in/mohamed-moghazi-9a729554/)
-- **Portfolio**: [Website](https://engmoghazy.wixsite.com/moghazy)
+- **Portfolio**: [Website](https://mohamedmoghazy.github.io/my-cv/)
 
 ## Professional Summary
 
