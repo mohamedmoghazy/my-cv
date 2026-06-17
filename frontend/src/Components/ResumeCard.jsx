@@ -73,6 +73,7 @@ const ResumeCard = () =>
 
                                 <li>
                                     <span className={styles.subTitle}>Full-Stack Web/App Dev Bootcamp</span>
+                                    <br />
                                     WBS Coding School, Berlin
                                     <br />
                                     <br />

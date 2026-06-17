@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+﻿import React, { useEffect } from "react";
 import styles from "./Home.module.css";
-import { Link } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 // import curvedImageSrc from "../assets/HeroImage.jpg";
 import CodeBackground from "./CodeBackground.jsx";
 import HeroImageSVG from "./HeroImageSVG.jsx";
@@ -16,11 +16,11 @@ const Hero = () =>
         <h1 className={styles.title}>
           Software Engineer
         </h1>
-        <p className={styles.description}>
-          I’m Expert in game development, virtual reality (VR), and mixed reality (MR). Proficient in C# and JavaScript, React with hands-on experience in Games, AR, VR, Web and mobile applications, and UI/UX design. I will Transform your ideas into reality.
+                <p className={styles.description}>
+          Software Engineer with 14+ years of experience in game development, AR/VR, and interactive software. Specialized in Unity, C#, gameplay systems, and multiplayer experiences. Shipped titles at Chimera Entertainment and Freeletics, and currently working as a Freelance Software Engineer.
         </p>
         <div className={styles.LearnmoreBtnContainer}>
-          <Link className={styles.LearnmoreBtn}>Learn more </Link>
+          <RouterLink to="/resume" className={styles.LearnmoreBtn}>Learn more </RouterLink>
           <p className={styles.LearnMoreBtnAfter}>arrow_forward</p>
         </div>
       </div>
@@ -33,3 +33,4 @@ const Hero = () =>
 };
 
 export default Hero;
+

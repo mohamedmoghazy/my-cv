@@ -52,6 +52,25 @@ const workExperience = [
             "Led software development, designed the app’s UI/UX for an intuitive user experience, and managed a small team, coordinating tasks and ensuring smooth collaboration.",
             "Focused on building scalable solutions, optimizing performance, and driving innovation in product development."
         ],
+    },
+    {
+        year: "2015 - 2017",
+        title: <><a href="https://nxtlyr.com" target="_blank" rel="noopener noreferrer">NXT LYR</a> - Unity Game Engineer</>,
+        location: "Lebanon - Fulltime",
+        details: [
+            "Developed mobile and VR games using Unity and C#.",
+            <>Mobile games: <a href="https://www.youtube.com/shorts/F7feEv_BJZk" target="_blank" rel="noopener noreferrer">Polyblast</a> and Highway Madness.</>,
+            <>VR games: <a href="https://www.youtube.com/watch?v=LiNxmbjRMY4" target="_blank" rel="noopener noreferrer">VINDICTA</a> and <a href="https://www.youtube.com/watch?v=ZCGOlfPzTcI" target="_blank" rel="noopener noreferrer">HOVR</a>.</>,
+        ],
+    },
+    {
+        year: "2011 - 2015",
+        title: "Early-Stage Companies - Unity Developer",
+        location: "Egypt - Fulltime",
+        details: [
+            "Worked with several early-stage companies developing mobile games and interactive applications using Unity and C#.",
+            "Companies include: 5D-Agency, GNSE Group, Epic Systems, Appmink.tv."
+        ],
     }
 ];
 

@@ -20,8 +20,8 @@ const ProfileCard = () =>
                         <h2 className={styles.greeting}>Hi!</h2>
                         <h1 className={styles.name}>I'm Mohamed Moghazi</h1>
                         <div className={styles.details}>
-                            <p><span className={styles.label}>RESIDENCE:</span> GERMANY</p>
-                            <p><span className={styles.label}>CITY:</span> BONN</p>
+                            <p><span className={styles.label}>RESIDENCE:</span> CANADA</p>
+                            <p><span className={styles.label}>CITY:</span> VANCOUVER</p>
                             <p>
                                 <span className={styles.label}>EMAIL:</span>{" "}
                                 <a href="mailto:Eng.moghazy@gmail.com" className={styles.link}>Eng.moghazy@gmail.com</a>
@@ -29,10 +29,10 @@ const ProfileCard = () =>
                             <p><span className={styles.label}>PHONE:</span> +49 (0) 15229018095</p>
                         </div>
                         <div className={styles.socialLinks}>
-                            <a href="#" className={styles.socialLink}>
+                            <a href="https://www.linkedin.com/in/mohamed-moghazi-9a729554/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                                 <FaLinkedin className={styles.icon} /> LinkedIn
                             </a>
-                            <a href="#" className={styles.socialLink}>
+                            <a href="https://github.com/dawaniyah-games" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                                 <FaGithub className={styles.icon} /> GitHub
                             </a>
                         </div>
