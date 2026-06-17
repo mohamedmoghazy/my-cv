@@ -3,12 +3,12 @@
     position: relative;
     justify-content: center;
     align-items: center;
-    transform: scale(0.77);
+    transform: scale(0.9);
     transform-origin: center;
-    margin-top: -87px;
-    margin-bottom: -87px;
-    margin-left: -73px;
-    margin-right: -73px;
+    margin-top: -37px;
+    margin-bottom: -37px;
+    margin-left: -32px;
+    margin-right: -32px;
 }
 
 .heroImageContainer {
